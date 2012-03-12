@@ -6,6 +6,7 @@
 	$results = $db->query('
 		SELECT id, name, longitude, latitude, street_address FROM tenniscourtlocator
 		ORDER BY id ASC
+		LIMIT 20
 	');
 
 ?><!DOCTYPE HTML>
