@@ -1,5 +1,4 @@
 <?php
-	require_once 'includes/filter-wrapper.php';
 	require_once 'includes/db.php';
 	
 	
@@ -8,19 +7,14 @@
 		ORDER BY id ASC
 		LIMIT 21
 	');
+	
+	include 'includes/index-top.php';
 
-?><!DOCTYPE HTML>
-<html>
-<head>
-	<meta charset="UTF-8">
-	<title>Tennis Court Locator</title>
-	<link href="css/public.css" rel="stylesheet">
-</head>
+?>
 
-<body>
 	<div id="header"><img src="images/tcl-title.png" alt="Tennis Court Locator Logo"></div>
 	
-	<div id="map"><img src="images/map.png" alt="Tennis Court Google Map" width="974" height="645"><div>
+	<div id="map"></div>
 	
 	<article>
 		<nav>
@@ -34,17 +28,18 @@
 		<div class="results">
 			<ol>
 				<?php foreach ($results as $tenniscourts) : ?>
-					<li>
-						<h3><a href="single.php?id=<?php echo $tenniscourts['id']; ?>"><?php echo $tenniscourts['name']; ?></a></h3>
+					<li itemscope itemtype="http://schema.org/TouristAttraction">
+						<h3><a href="single.php?id=<?php echo $tenniscourts['id']; ?>" itemprop="name"><?php echo $tenniscourts['name']; ?></a></h3>
+						<span itemprop="geo" itemscope itemtype="http://schema.org/GeoCoordinates">
+							<meta itemprop="latitude" content="<?php echo $tenniscourts['latitude']; ?>">
+							<meta itemprop="longitude" content="<?php echo $tenniscourts['longitude']; ?>">
+						</span>
 					</li>
 				<?php endforeach; ?>
 			</ol>
 		</div>
 	</article>
 	
-	
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-	<script src="js/open-data-app.js"></script>
-
-</body>
-</html>
+<?php
+	include 'includes/index-bottom.php';
+?>
