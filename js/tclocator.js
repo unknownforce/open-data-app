@@ -29,6 +29,7 @@ $(document).ready(function() {
 			position : position,
 			map : map,
 			title : tennis,
+			icon : 'images/tcl-icon.png',
 			animation: google.maps.Animation.DROP		
 		});
 	
