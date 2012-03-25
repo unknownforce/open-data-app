@@ -1,5 +1,7 @@
 $(document).ready(function() {
 	
+	// Tennis Map
+	
 	var gMap = {
 		center : new google.maps.LatLng(45.424871,-75.699706)
 		, zoom : 12
@@ -52,4 +54,21 @@ $(document).ready(function() {
 		google.maps.event.addListener(marker, 'click', showInfoWindow);
 		google.maps.event.addDomListener($(this).find('a').get(0), 'click', showInfoWindow);	
 	});
+	
+	//	Tennis Ratings
+	
+	var $rateTennisLi = $('.tennis-rating li');
+	
+	$rateTennisLi.on('mouseenter', function (ev) {
+		var current = $(this).index();
+		
+		for (var i=0; i < current; i++) {
+			$rateTennisLi.eq(i).addClass('rated-hover');	
+		}
+	});
+
+	$rateTennisLi.on('mouseleave', function (ev) {
+		$rateTennisLi.removeClass('rated-hover');	
+	});
+	
 });
