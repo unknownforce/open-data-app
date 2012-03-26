@@ -25,7 +25,7 @@ function save_rate_cookie ($id, $rate) {
 		$rated[] = $key . ':' . $value;	
 	}
 	
-	$rated[] = $id . ':' / $rate;
+	$rated[] = $id . ':' . $rate;
 	
 	$cookie_content = implode(';', $rated);
 	

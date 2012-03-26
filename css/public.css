@@ -124,5 +124,50 @@ p {
 }
 
 
+.tennis-rater {
+	display: inline-block;
+	margin: 0 0 0 1%;
+	padding: 0;
+	vertical-align: middle;
 
+	list-style-type: none;
+	line-height: 1;
+}
+
+.tennis-rater-lvl {
+	float: left;
+
+	color: #efecd2;
+}
+
+.tennis-rater-lvl a,
+.tennis-rater-lvl a:link,
+.tennis-rater-lvl a:visited {
+	color: #efecd2;
+	text-decoration: none;
+}
+
+.tennis-rater-lvl a:hover,
+.tennis-rater-lvl a:focus,
+.tennis-rater-lvl a:active,
+.is-rated,
+.is-rated a,
+.is-rated a:link,
+.is-rated a:visited,
+.is-rated a:hover,
+.is-rated a:focus,
+.is-rated a:active,
+.rated-hover a,
+.rated-hover a:link,
+.rated-hover a:visited {
+	color: #ffe91f;
+}
+
+.ratings {
+	margin: 0 0 0 4%;	
+}
+
+h2 {
+	margin:0 0 20px 1%;	
+}
 

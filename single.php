@@ -35,43 +35,45 @@
 	
 	$cookie = get_rate_cookie();
 	
-	include 'includes/theme-top.php';
+	include 'includes/index-top.php';
 
 ?>
 
-<body>
 	<div id="header"><img src="images/tcl-title.png" alt="Tennis Court Locator Logo"></div>
 	
 	<div id="court-info">
-		<div class="info">
-			<h1><?php echo $results['name']; ?></h1>
-			<p class="street"><?php echo $results['street_address']; ?></p>
-			<p>Longitude: <?php echo $results['longitude']; ?></p>
-			<p>Latitude: <?php echo $results['latitude']; ?></p>
-			<p>Average Rating: <meter value="<?php echo $rating; ?>" min="0" max="5"><?php echo $rating; ?> out of 5</meter></p>
+		<div class="ratings">
+			<div class="info">
+				<h1><?php echo $results['name']; ?></h1>
+				<p class="street"><?php echo $results['street_address']; ?></p>
+				<p>Longitude: <?php echo $results['longitude']; ?></p>
+				<p>Latitude: <?php echo $results['latitude']; ?></p>
+				<p>Average Rating: <meter value="<?php echo $rating; ?>" min="0" max="5"><?php echo $rating; ?> out of 5</meter></p>
+			</div>
+			
+			<?php if (isset($cookie[$id])) : ?>
+			
+			<h2>Your Rating</h2>
+			<ol class="tennis-rater tennis-rating">
+				<?php for ($i = 1; $i <= 5; $i++) : ?>
+					<?php $class = ($i <= $cookie[$id]) ? 'is-rated' : ''; ?>
+					<li class="tennis-rater-lvl <?php echo $class; ?>">★</li>
+				<?php endfor; ?>
+			</ol>
+			
+			<?php else : ?>
+			
+			<h2>Rate</h2>
+			<ol class="tennis-rater tennis-rating">
+				<?php for ($i = 1; $i <= 5; $i++) : ?>
+				<li class="tennis-rater-lvl"><a href="rate.php?id=<?php echo $results['id']; ?>&rate=<?php echo $i; ?>">★</a></li>
+				<?php endfor; ?>
+			</ol>
+			
+			<?php endif; ?>
 		</div>
-		
-		<?php if (isset($cookie[$id])) : ?>
-		
-		<h2>Your Rating</h2>
-		<ol class="tennis-rater tennis-rating">
-			<?php for ($i = 1; $i <= 5; $i++) : ?>
-				<?php $class = ($i <= $cookie[$id]) ? 'is-rated' : ''; ?>
-				<li class="tennis-rater-lvl <?php echo $class; ?>">★</li>
-			<?php endfor; ?>
-		</ol>
-		<?php else : ?>
-		
-		<h2>Rate</h2>
-		<ol class="tennis-rater tennis-rating">
-			<?php for ($i = 1; $i <= 5; $i++) : ?>
-			<li class="tennis-rater-lvl"><a href="rate.php?id=<?php echo $results['id']; ?>&rater=<?php echo $i; ?>">★</a></li>
-			<?php endfor; ?>
-		</ol>
-		
-		<?php endif; ?>
 	</div>
 	
 <?php
-	include 'includes/theme-bottom.php';
+	include 'includes/index-bottom.php';
 ?>

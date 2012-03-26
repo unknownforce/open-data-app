@@ -1,10 +1,10 @@
 <?php
 
 	require_once 'includes/db.php';
-	require_once 'includes/functions';
+	require_once 'includes/functions.php';
 	
 	$id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
-	$rate = filter_input(INPUT_POST, 'rate', FILTER_SANITIZE_NUMBER_INT);
+	$rate = filter_input(INPUT_GET, 'rate', FILTER_SANITIZE_NUMBER_INT);
 	$cookie = get_rate_cookie();
 	
 	if (empty($id)) {
@@ -12,7 +12,11 @@
 		exit;
 	}
 	
-	if (isset($cookie[$id]) || $rate > 0 || $rate < 5 ) {
+	// Only allow the user to rate if:
+	//  1. there is no cookie, aka they haven't already rated
+	//  2. the rating value is greater than 0
+	//  3. the rating value is less than 5
+	if (isset($cookie[$id]) || $rate < 0 || $rate > 5) {
 		header('Location: single.php?id=' . $id);
 		exit;	
 	}

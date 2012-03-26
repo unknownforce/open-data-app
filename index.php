@@ -1,12 +1,9 @@
 <?php
 	require_once 'includes/db.php';
 	
-	
 	$results = $db->query('
-		SELECT id, name, longitude, latitude, street_address, rate_count, rate_total
-		FROM tenniscourtlocator
+		SELECT id, name, longitude, latitude, street_address, rate_count, rate_total FROM tenniscourtlocator
 		ORDER BY id ASC
-		LIMIT 21
 	');
 	
 	include 'includes/index-top.php';
@@ -39,7 +36,7 @@
 							$rating = 0;	
 						}
 					?>
-						<li itemscope itemtype="http://schema.org/TouristAttraction">
+						<li itemscope itemtype="http://schema.org/TouristAttraction" data-id="<?php echo $tenniscourts['id']; ?>">
 							<h3><a href="single.php?id=<?php echo $tenniscourts['id']; ?>" itemprop="name"><?php echo $tenniscourts['name']; ?></a></h3>
 							<span itemprop="geo" itemscope itemtype="http://schema.org/GeoCoordinates">
 								<meta itemprop="latitude" content="<?php echo $tenniscourts['latitude']; ?>">
