@@ -1,4 +1,11 @@
 <?php
+	require_once '../includes/users.php';
+	
+	if (!user_is_signed_in()) {
+		header('Location: sign-in.php');
+		exit;	
+	}
+
 	require_once '../includes/db.php';
 	
 	$results = $db->query('
@@ -24,6 +31,8 @@
 			<a href="add.php">Add a Tennis Court</a>
 		</nav>
 		<input id="search">
+		
+		<a href="sign-out.php">Sign Out</a>
 		
 		<div class="results">
 			<ol>
