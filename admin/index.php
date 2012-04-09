@@ -43,7 +43,6 @@
 			<nav>
 				<a href="add.php">Add a Tennis Court</a>
 			</nav>
-			<input id="search">
 			
 			<div class="results">
 				<ol>
