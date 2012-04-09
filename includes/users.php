@@ -1,5 +1,14 @@
 <?php
-
+/**
+* Displays the list and map for the Open Data Set
+*
+* @package Tennis Court Locator
+* @copyright 2012 Petrus Chan
+* @author Petrus Chan <admin@petruschan.com>
+* @link https://github.com/unknownforce/open-data-app
+* @license New BSD License
+* @version 1.0.0
+*/
 	// A self-contained file that holds all the functions we need for user authentication
 	
 	function user_create ($db, $email, $password) {

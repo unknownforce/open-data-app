@@ -1,4 +1,14 @@
 <?php
+/**
+* Displays the list and map for the Open Data Set
+*
+* @package Tennis Court Locator
+* @copyright 2012 Petrus Chan
+* @author Petrus Chan <admin@petruschan.com>
+* @link https://github.com/unknownforce/open-data-app
+* @license New BSD License
+* @version 1.0.0
+*/
 	require_once '../includes/users.php';
 	require_once '../includes/db.php';
 	
@@ -45,10 +55,18 @@
 <head>
 	<meta charset="utf-8">
 	<title>Sign in</title>
+	<link href="../css/admin.css" rel="stylesheet">
 </head>
 
 <body>
-	<form method="post" action="sign-in.php">
+
+	<div id="header"><img src="../images/tcl-title.png" alt="Tennis Court Locator Logo"></div>
+	
+	
+	<form id="sign-in" method="post" action="sign-in.php">
+		<div>
+			<h1>Sign in</h1>
+		</div>
 		<div>
 			<label for="email">E-mail Address</label>
 			<input type="email" id="email" name="email" required>
@@ -57,7 +75,9 @@
 			<label for="password">Password</label>
 			<input type="password" id="password" name="password" required>
 		</div>
+		<div>
 		<button type="submit">Sign In</button>
+		</div>
 	</form>
 </body>
 </html>
