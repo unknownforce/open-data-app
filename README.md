@@ -6,7 +6,7 @@ Summary of App
 - Links
 	- <https://github.com/unknownforce/open-data-app>
 	- <http://chan0260.phpfogapp.com/>
-	- <https://github.com/unknownforce/open-data-app/tree/gh-pages>
+	- <http://unknownforce.github.com/open-data-app/>
 	- <http://ottawa.ca/online_services/opendata/info/index_en.html#t>
 	- <www.petruschan.com>
 	
