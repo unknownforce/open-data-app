@@ -4,10 +4,10 @@
 	<meta charset=utf-8>
 	<title>Tennis Court Locator!</title>
 	<?php if ($_SERVER['HTTP_HOST'] == 'localhost') : ?>
-	<link href="/css/public.css" rel="stylesheet">
+	<link href="css/public.css" rel="stylesheet">
 	<?php else : ?>
-	<link href="/css/public.min.css" rel="stylesheet">
+	<link href="css/public.min.css" rel="stylesheet">
 	<?php endif; ?>
-	<script src="/js/modernizr.dev.js"></script>
+	<script src="js/modernizr.dev.js"></script>
 </head>
 <body>
