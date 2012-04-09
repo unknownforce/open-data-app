@@ -171,12 +171,44 @@ $(document).ready(function() {
 		
 		});
 		
+		var ratingsTennis = '';
+		var indoorsTennis = '';
+		var outdoorsTennis = '';
 		
 		$('.ratings').on('click', function (ev) {
 			ev.preventDefault();
+			if (!ratingsTennis) {
+				$('.results > ol').load('ratings.php', {}, function (data) {
+					ratingsTennis = data;
+				});
+			} else {
+				$('.results > ol').html(ratingsTennis);
+			}	
+		});
+		
+		$('.indoors').on('click', function (ev) {
+			ev.preventDefault();
 			
-			$('.results > ol').load('ratings.php');
+			if (!indoorsTennis) {
+				$('.results > ol').load('indoors.php', {}, function (data) {
+					indoorsTennis = data;	
+				});
+			} else {
+				$('.results > ol').html(indoorsTennis);
+			}
 			
+		});
+		
+		$('.outdoors').on('click', function (ev) {
+			ev.preventDefault();
+			
+			if (!outdoorsTennis) {
+				$('.results > ol').load('outdoors.php', {}, function (data) {
+					outdoorsTennis = data;	
+				});	
+			} else {
+				$('.results > ol').html(outdoorsTennis);
+			}
 			
 		});
 		

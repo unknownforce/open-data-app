@@ -12,7 +12,7 @@
 	require_once 'includes/db.php';
 	
 	$results = $db->query('
-		SELECT id, name, longitude, latitude, street_address, rate_count, rate_total FROM tenniscourtlocator
+		SELECT id, name, longitude, latitude, street_address, rate_count, rate_total, isindoor, isoutdoor FROM tenniscourtlocator
 		ORDER BY id ASC
 		LIMIT 21
 	');
@@ -36,8 +36,6 @@
 				<button class="indoors">Indoors</button>
 				<button class="outdoors">Outdoors</button>
 			</nav>
-			
-			<input id="search">
 			
 			<div class="results">
 				<button id="geo">Find Me</button>
