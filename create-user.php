@@ -16,8 +16,8 @@
 	require_once 'includes/db.php';
 	require_once 'includes/users.php';
 	
-	$email = 'bradlet@algonquincollege.com';
-	$password = 'password';
+	$email = 'SET EMAIL HERE';
+	$password = 'SET PASSWORD HERE';
 	
 	user_create($db, $email, $password);
 	
