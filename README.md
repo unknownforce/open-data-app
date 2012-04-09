@@ -1,14 +1,14 @@
 # Tennis Court Locator
+Summary of App
 
-## Whats included in a README?
-- Summary of App
+## Resources
 - Installation Instructions
 - Links
-	- Github
-	- Phpfog
-	- Brief
-	- City Ottawa Dataset
-	- You
+	- <https://github.com/unknownforce/open-data-app>
+	- <http://chan0260.phpfogapp.com/>
+	- <https://github.com/unknownforce/open-data-app/tree/gh-pages>
+	- <http://ottawa.ca/online_services/opendata/info/index_en.html#t>
+	- <www.petruschan.com>
 	
 - Who made it
 - Licence/Copyright
