@@ -33,8 +33,7 @@ $(document).ready(function() {
 				+ '<p>' + '<a href="single.php?id=' + $(this).attr('data-id') + '">Rate or Comment!</a>' + '<p>'
 				+ '</div>'
 			;
-			
-			
+		
 			var latitude = parseFloat($(this).find('meta[itemprop="latitude"]').attr('content'));
 			var longitude = parseFloat($(this).find('meta[itemprop="longitude"]').attr('content'));
 			var position = new google.maps.LatLng(latitude, longitude);
@@ -67,8 +66,6 @@ $(document).ready(function() {
 				});
 				
 				infoWindow.open(map, marker);
-	
-		
 			}
 			
 			google.maps.event.addListener(marker, 'click', showInfoWindow);
