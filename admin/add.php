@@ -58,7 +58,11 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Add a Tennis Court</title>
+	<?php if ($_SERVER['HTTP_HOST'] == 'localhost') : ?>
 	<link href="../css/admin.css" rel="stylesheet">
+	<?php else : ?>
+	<link href="../css/admin.min.css" rel="stylesheet">
+	<?php endif; ?>
 </head>
 
 <body>

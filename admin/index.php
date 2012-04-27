@@ -28,7 +28,11 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Tennis Court Locator - Admin</title>
+	<?php if ($_SERVER['HTTP_HOST'] == 'localhost') : ?>
 	<link href="../css/admin.css" rel="stylesheet">
+	<?php else : ?>
+	<link href="../css/admin.min.css" rel="stylesheet">
+	<?php endif; ?>
 	<script src="../js/modernizr.dev.js"></script>
 </head>
 

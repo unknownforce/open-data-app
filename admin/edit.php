@@ -83,7 +83,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Edit a <?php echo $name; ?></title>
-	<link href="../css/admin.css" rel="stylesheet">
+	<link href="../css/admin.min.css" rel="stylesheet">
 	<script src="../js/modernizr.dev.js"></script>
 </head>
 

@@ -1,0 +1,33 @@
+/**
+* Displays the list and map for the Open Data Set
+*
+* @package Tennis Court Locator
+* @copyright 2012 Petrus Chan
+* @author Petrus Chan <admin@petruschan.com>
+* @link https://github.com/unknownforce/open-data-app
+* @license New BSD License
+* @version 1.0.0
+*/
+html{margin:0}
+body{margin:0;padding:0;background:url(../images/tcl-bg.jpg) no-repeat top center;background-size:100%;font:normal 100%/1 Arial,Helvetica,sans-serif}
+#header{width:100%;height:8em;background-color:rgba(255,255,255,0.5)}
+#header img{margin:0 0 0 4.5%}
+#map{position:absolute;left:5%;width:59%;height:90%;background-color:#fff}
+nav{margin:1.5em 0}
+nav a,nav a:link,nav a:visited{text-decoration:none;margin:0 1em 0;padding:2% 25%;color:#000;background-color:#fbfb00;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;-webkit-box-shadow:3px 3px 5px 3px rgba(0,0,0,.5);-moz-box-shadow:3px 3px 5px 3px rgba(0,0,0,.5);box-shadow:3px 3px 5px 3px rgba(0,0,0,.5)}
+nav a:hover,nav a:focus,nav a:active{background-color:#cfcf00;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;-webkit-box-shadow:3px 3px 5px 3px rgba(0,0,0,.5);-moz-box-shadow:3px 3px 5px 3px rgba(0,0,0,.5);box-shadow:3px 3px 5px 3px rgba(0,0,0,.5)}
+#search{background-color:#fff;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;margin:2% 0 0 4%;width:27em;height:2em;border:2px solid #000}
+article{display:inline-block;background-color:rgba(255,255,255,0.5);margin:0 0 0 65%;width:30em;height:1050px}
+section{margin:1.25% 0 0 0}
+#edit-tennis{margin:4% 0 0 4%}
+#edit-tennis div{margin:5% 0}
+p a{margin:0 3% 0 0}
+#edit-info{height:30em}
+.results{width:90%;height:85%;margin:2% 0 0 4%;padding:.65em .5em;background-color:#fff}
+#court-info{background-color:rgba(255,255,255,0.5);width:100%;height:40em}
+.info{margin:2% 0 0 5%;padding:1.25% 0 0 0}
+#sign-in{height:45em;margin:1.25% 0 0 0;background-color:rgba(255,255,255,0.5)}
+#sign-in div{margin:0 0 1% 5%}
+h1{padding:1em 0 0 0}
+.sign-out{margin:1em 0 0 1em}
+#edit-info div{margin:0 0 1% 5%}
