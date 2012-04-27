@@ -11,7 +11,7 @@ An open data application that will help anyone find a Tennis Court located near 
 3. Replace the Google API Code in the 'index-bottom.php' located in includes folder to your own API code.
 
 ## GitHub
-[View Files](https://github.com/unknownforce/open-data-app)
+[View Files](https://github.com/unknownforce/open-data-app>
 
 ## PHPFog
 [Demo](http://chan0260.phpfogapp.com/)
